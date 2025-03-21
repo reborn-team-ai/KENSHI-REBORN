@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenshi Reborn</title>
+    <meta name="keywords" content="Kenshi, моды, REBORN Lite, установка, глобальная сборка">
+    <meta name="description" content="REBORN Lite — глобальная сборка модов для Kenshi. Установка, системные требования и шейдеры.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Установка REBORN Lite",
+      "description": "Инструкция по установке REBORN Lite — глобальной сборки модов для Kenshi.",
+      "url": "https://yoursite.com/installation-guide",
+      "publisher": {
+        "@type": "Team",
+        "name": "REBORN Team",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "images/logo.png",
+          "width": 200,
+          "height": 200
+        }
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        body {
+            background: url('images/Пустыня фон.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: "Stick", sans-serif;
+            overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+            overflow-y: auto; /* Включаем вертикальную прокрутку */
+        }
+        .blur-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        .title-bar {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            display: flex; /* Используем Flexbox для управления размещением */
+            align-items: center; /* Центрируем элементы по вертикали */
+            justify-content: space-between; /* Элементы распределены по краям */
+        }
+        .install-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #ff8c00;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .install-link:hover {
+            color: #e07a00;
+        }
+        .central-section {
+            position: relative;
+            bottom: -500px;
+            width: 100%;
+            margin: 50px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-bar {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            margin-top: 50px;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2) rotate(10deg);
+            filter: brightness(1.3);
+        }
+    </style>
+</head>
+<script src="java/scroll-gallery.js" defer></script>
+<script src="java/sandstorm-effect.js" defer></script>
+<body>
+    <video class="background-video" autoplay muted loop playsinline>
+        <source src="video/background.mp4" type="video/mp4">
+    </video>
+    <div class="blur-overlay"></div>
+    <div class="sandstorm-container"></div>
+    <header>
+        <div class="title-bar">
+            <img src="images/logo.png" alt="Лого" class="logo">
+            <h1 class="gradient-text">Kenshi - REBORN</h1>
+            <a href="installation/installation.html" class="install-link">Установка</a>
+        </div>
+
+        <!-- Кнопка "Скачать" с исправленным размещением -->
+        <div class="download-button-container">
+            <a href="https://drive.google.com/file/d/1d7bSYrLnm29BI2kWhbpN2UMSTrF8Ubde/view?usp=sharing" class="download-button">Скачать</a>
+        </div>
+    </header>
+    <main>
+        <section class="central-section">
+            <div class="text-block">
+                <h2>Наша команда и концепция</h2>
+                    <p>Мы — команда трёх увлечённых разработчиков, с гордостью представляем вам REBORN — глобальную сборку модификаций для Kenshi. Вложив всю свою страсть и энергию, мы создали проект, который переосмысливает любимую игру, добавляя новые элементы и свежие идеи. Этот мод не только расширяет игровой процесс, но и делает его глубже, сложнее и интереснее. Наш девиз: Мы уважаем оригинальный мир Kenshi и стремимся сохранить его атмосферу. Никаких аниме-девочек с базуками — только суровый, переработанный мир Kenshi, в котором каждая деталь тщательно продумана.</p>
+            </div>
+            <div class="text-block">
+                <h2>Lite-версия сборки</h2>
+                <p>Мы понимаем, что не у всех есть мощные ПК, поэтому разработали Lite-версию сборки REBORN. Эта версия оптимизирована для слабых компьютеров, сохраняя основные улучшения, но не так сильно расширяя контент, как Premium-версия. Lite-версия — это отличная возможность насладиться обновлённым миром Kenshi без потери производительности!</p>
+            </div>
+            <div class="text-block">
+                <h2>Благодарность за поддержку</h2>
+                <p>Мы искренне благодарны каждому, кто поддерживает нас на Boosty. Мы ценим не только финансовую поддержку, но и любое участие — будь то советы, отзывы или просто добрые слова. Каждый ваш вклад помогает нам двигаться дальше. Спасибо, что верите в нас и в REBORN! 💙</p>
+                    <div class="small-text">
+                        <p>Все скриншоты сделаны на версии сборки REBORN PREMIUM +</p>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Галерея теперь находится ниже центральной секции -->
+        <div class="gallery-container">
+            <div class="gallery">
+              <img src="images/picture1.png" alt="Picture 1">
+              <img src="images/picture2.png" alt="Picture 2">
+              <img src="images/picture3.png" alt="Picture 3">
+              <img src="images/picture4.png" alt="Picture 4">
+              <img src="images/picture5.png" alt="Picture 5">
+              <img src="images/picture6.png" alt="Picture 6">
+              <img src="images/picture7.png" alt="Picture 7">
+              <img src="images/picture8.png" alt="Picture 8">
+              <img src="images/picture9.png" alt="Picture 9">
+              <img src="images/picture10.png" alt="Picture 10">
+              <img src="images/picture11.png" alt="Picture 11">
+              <img src="images/picture12.png" alt="Picture 12">
+              <img src="images/picture13.png" alt="Picture 13">
+              <img src="images/picture14.png" alt="Picture 14">
+              <img src="images/picture15.png" alt="Picture 15">
+              <img src="images/picture16.png" alt="Picture 16">
+              <img src="images/picture17.png" alt="Picture 17">
+              <img src="images/picture18.png" alt="Picture 18">
+              <img src="images/picture19.png" alt="Picture 19">
+              <img src="images/picture20.png" alt="Picture 20">
+              <img src="images/picture21.png" alt="Picture 21">
+              <img src="images/picture22.png" alt="Picture 22">
+            </div>
+        </div>
+    </main>
+    <footer>
+    <div class="footer-bar">
+            <p>© Kenshi Reborn 2025</p>
+            <p class="footer-text">Website & Design by Niimits & AI</p>
+            <div class="social-icons">
+                <a href="https://discord.gg/XDu2wkRxtx" target="_blank" rel="noopener noreferrer">
+                    <img src="images/discord-icon.png" alt="Discord">
+                </a>
+                <a href="https://t.me/REBORNKENSHI" target="_blank" rel="noopener noreferrer">
+                    <img src="images/telegram-icon.png" alt="Telegram">
+                </a>
+                <a href="https://boosty.to/niimits" target="_blank" rel="noopener noreferrer">
+                    <img src="images/boosty-icon.png" alt="Boosty">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

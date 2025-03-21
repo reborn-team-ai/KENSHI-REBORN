@@ -1,0 +1,312 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('Пустыня фон.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+    box-sizing: border-box; /* Учитываем паддинги в расчете ширины */
+}
+
+/* Верхняя линия */
+.title-bar {
+    background: #222;
+    color: #ff8c00;
+    padding: 10px 60px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Выравниваем элементы по краям */
+    align-items: center;
+    box-sizing: border-box; /* Учитываем паддинги в расчете ширины */
+}
+
+/* Заголовок */
+.title-bar h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Кнопка "Установить" */
+.install-link {
+    font-size: 10px;
+    display: inline-block;
+    max-width: calc(100% - 40px); /* Ограничение ширины кнопки */
+    text-overflow: ellipsis;
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.install-link:hover {
+    color: #e07a00;
+}
+
+/* Центральная секция */
+.central-section {
+    position: absolute; /* Меняем на relative для корректного отображения */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(34, 34, 34, 0.95);
+    padding: 30px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* Текстовые блоки */
+.text-block {
+    margin-bottom: 40px;
+    padding: 15px; /* Добавляем внутренние отступы для текста */
+    width: 100%; /* Растягиваем блок на всю ширину родителя */
+    max-width: 800px; /* Ограничиваем максимальную ширину */
+    margin: 20px auto; /* Центрируем блок по горизонтали */
+    text-align: left; /* Текст выравнивается по левому краю */
+    word-wrap: break-word; /* Перенос длинных слов */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.text-block h2 {
+    font-size: 22px;
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
+
+.text-block p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Контейнер галереи */
+.gallery-container {
+    overflow: hidden; /* Скрываем выходящие за пределы изображения */
+    width: 100%; /* Галерея на всю ширину окна */
+    display: flex;
+    justify-content: center; /* Центрируем галерею по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    position: relative; /* Абсолютное позиционирование */
+    bottom: -30px; /* Устанавливаем расстояние от нижней панели */
+    height: 300px; /* Высота галереи */
+    z-index: 10; /* Располагаем галерею поверх других элементов */
+}
+
+/* Галерея */
+.gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll 15s linear infinite; /* Регулировка скорости анимации */
+    width: calc(300px * 7); /* Подгонка ширины под количество изображений */
+}
+
+/* Изображения */
+.gallery img {
+    width: 400px; /* Размер изображений */
+    height: auto;
+    margin-right: 30px; /* Отступы между изображениями */
+    flex-shrink: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Эффект увеличения */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+/* Кнопка скачивания */
+.download-button-container {
+    position: absolute; /* Привязываем кнопку к верхней панели */
+    top: calc(15px + 100px); /* Отступ сверху равен высоте верхней панели */
+    left: 50%; /* Центрируем кнопку по горизонтали */
+    transform: translateX(-50%); /* Смещаем кнопку, чтобы она была по центру */
+    z-index: 1000; /* Устанавливаем, чтобы кнопка была поверх других элементов */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8c00; /* Цвет кнопки */
+    color: #fff; /* Цвет текста */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0; /* Убираем закругление */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.download-button:hover {
+    background-color: #e07a00; /* Тёмный оттенок при наведении */
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
+}
+
+/* Нижняя линия */
+.footer-bar {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 40px;
+}
+
+/* Социальные иконки */
+.social-icons {
+    display: flex;
+    justify-content: flex-end; /* Выравниваем иконки по правому краю */
+    gap: 10px;
+    max-width: 100%;
+    position: absolute;
+    right: 20px;
+    bottom: 20px; /* Немного поднимаем иконки */
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Переливающийся текст */
+.gradient-text {
+    font-size: 64px; /* Размер текста */
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffffff, #ff8c00, #e07a00, #b14b00, #ffffff); /* Добавили белый в градиент */
+    background-size: 300% auto; /* Увеличили ширину градиента */
+    -webkit-background-clip: text; /* Применяем градиент к тексту */
+    -webkit-text-fill-color: transparent; /* Убираем фон текста */
+    animation: gradient-move 6s linear infinite; /* Бесконечная анимация */
+    left: -30px; /* Смещает текст на 50 пикселей вправо */
+    position: relative; /* Позволяет двигать элемент относительно исходного положения */
+}
+
+/* Анимация для градиента */
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%; /* Градиент полностью переместился */
+    }
+    100% {
+        background-position: 0% 50%; /* Градиент вернулся в начало */
+    }
+}
+/* Контейнер для бури */
+.sandstorm-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Контейнер не будет взаимодействовать с пользователем */
+    overflow: hidden;
+    z-index: 1000; /* Располагаем поверх всех элементов */
+}
+
+/* Частицы песка */
+.sandstorm-container .particle {
+    position: absolute;
+    background-color: rgba(255, 204, 153, 0.7); /* Цвет песка */
+    width: 5px;
+    height: 5px;
+    border-radius: 50%; /* Скругляем частицы */
+    animation: moveParticle 5s linear infinite; /* Анимация движения */
+}
+
+/* Анимация движения частиц */
+@keyframes moveParticle {
+    from {
+        transform: translate(0, 0) scale(1); /* Начальная точка */
+        opacity: 1; /* Частица видна */
+    }
+    to {
+        transform: translate(300px, 100vh) scale(0.5); /* Перемещение вниз и вправо */
+        opacity: 0; /* Частица исчезает */
+    }
+}
+
+/* Для всей страницы */
+body {
+    overflow-y: auto; /* Включаем вертикальную прокрутку страницы */
+    height: auto;
+}
+
+/* Для всех браузеров на основе Webkit (например, Chrome, Edge) */
+body::-webkit-scrollbar {
+    width: 10px; /* Ширина вертикального скроллбара */
+    height: 10px; /* Высота горизонтального скроллбара */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(34, 34, 34, 0.95); /* Цвет фона трека скроллбара */
+    border-radius: 5px; /* Закруглённые углы трека */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ff8c00; /* Цвет полосы прокрутки */
+    border-radius: 5px; /* Закруглённые углы полосы прокрутки */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Эффект тени */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #e07a00; /* Более тёмный оттенок при наведении */
+}
+
+/* Для других браузеров */
+body {
+    scrollbar-color: #ff8c00 rgba(34, 34, 34, 0.95); /* Цвет линии прокрутки и трека */
+    scrollbar-width: thin; /* Тонкий скроллбар */
+}
+
+.logo {
+    height: 70px; /* Устанавливаем высоту логотипа */
+    width: 70px; /* Устанавливаем ширину логотипа */
+    border-radius: 50%; /* Закругляем края */
+    margin-right: 20px; /* Отступ справа от логотипа */
+    object-fit: cover; /* Уменьшаем или обрезаем, чтобы логотип корректно вписывался */
+    display: inline-block; /* Логотип отображается как встроенный блок */
+    vertical-align: middle; /* Выравниваем логотип по вертикали с текстом */
+}
+
+.background-video {
+    position: relative; /* Закрепляем видео на фоне */
+    top: 0;
+    left: 0;
+    width: 100%; /* Видео растягивается на всю ширину */
+    height: 100%; /* Видео растягивается на всю высоту */
+    object-fit: contain; /* Полностью отображаем видео без обрезки */
+    background: black; /* Добавляем фон, если будут пустые области */
+    z-index: -1; /* Видео остается на заднем плане */
+}
